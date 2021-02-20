@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginTop="3dp"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="15dp"
+    android:layout_marginHorizontal="5dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_gradient"
+    android:id="@+id/music_item">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginHorizontal="6dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/cropd"
+        android:layout_marginTop="5dp"
+        android:foregroundGravity="center_vertical"
+        android:background="@drawable/white_gradient"
+        app:cardCornerRadius="50dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher_round"
+            android:id="@+id/img_music"
+            android:padding="5dp"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/music_file_name"
+        android:text="@string/file_name_music_item"
+        android:layout_toEndOf="@+id/cropd"
+        android:layout_centerVertical="true"
+        android:textColor="?colorAccent"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_toStartOf="@+id/menuMore"
+        android:layout_marginStart="10dp"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_more"
+        android:id="@+id/menuMore"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp"/>
+</RelativeLayout>
+</androidx.cardview.widget.CardView>

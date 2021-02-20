@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="DarkTheme" parent="Base.AppTheme.Dark" />
+    <style name="Base.AppTheme.Dark" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkDark</item>
+        <item name="colorAccent">@color/colorAccentDark</item>
+        <item name="colorSecondary">@color/colorTabDark</item>
+    </style>
+
+    <style name="LightTheme" parent="Base.AppTheme.Light" />
+    <style name="Base.AppTheme.Light" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryLight</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkLight</item>
+        <item name="colorAccent">@color/colorAccentLight</item>
+        <item name="colorSecondary">@color/colorTabLight</item>
+    </style>
+
+    <style name="CoolTheme" parent="Base.AppTheme.Cool" />
+    <style name="Base.AppTheme.Cool" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryLight1</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkLight1</item>
+        <item name="colorAccent">@color/colorAccentLight1</item>
+        <item name="colorSecondary">@color/colorTabLight1</item>
+    </style>
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#333131</color>
+    <color name="colorPrimaryDarkDark">#212121</color>
+    <color name="colorAccentDark">#FBFDFD</color>
+    <color name="colorTabDark">#009688</color>
+
+<!--    for light theme-->
+
+    <color name="colorPrimaryLight">#55A4E4</color>
+    <color name="colorPrimaryDarkLight">#4C9BDD</color>
+    <color name="colorAccentLight">#FBFDFD</color>
+    <color name="colorTabLight">#1D7AC5</color>
+
+<!--    for more dark but light-->
+    <color name="colorPrimaryLight1">#133E61</color>
+    <color name="colorPrimaryDarkLight1">#0B2A43</color>
+    <color name="colorAccentLight1">#C8E1F4</color>
+    <color name="colorTabLight1">#220F45</color>
+</resources>
