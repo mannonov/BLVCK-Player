@@ -5,9 +5,11 @@ import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaMetadataRetriever;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -24,13 +26,18 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.VideoView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.palette.graphics.Palette;
 
 import com.aman.playmusix.R;
 
+import net.alhazmy13.mediapicker.Video.VideoPicker;
+
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import static uz.jaxadev.blvckplayer.AlbumDetailsAdapter.musicFilesAlbums;
 import static uz.jaxadev.blvckplayer.MusicAdapter.mFiles;
@@ -39,8 +46,9 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
     TextView song_name, artist;
     TextView duration_played;
     TextView duration_total;
-    ImageView next, previous, back_button;
+    ImageView next, previous, back_button,menuBtn;
     ImageView pause_play;
+    VideoView videoView;
     SeekBar seekBar;
     int position = -1;
     Thread pausePlay, nextBtn, previousBtn;
@@ -51,6 +59,9 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
     MusicService musicService;
     boolean bounded = false;
     Intent intent;
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String TEXT = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,11 +73,73 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         getIntentMethod();
         back_button.setOnClickListener(v -> onBackPressed());
 
+        menuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new VideoPicker.Builder(PlayerActivity.this)
+                        .mode(VideoPicker.Mode.GALLERY)
+                        .directory(VideoPicker.Directory.DEFAULT)
+                        .extension(VideoPicker.Extension.MP4)
+                        .enableDebuggingMode(true)
+                        .build();
+            }
+        });
+        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setVolume(0f, 0f);
+                mp.setLooping(true);
+                float videoRatio = mp.getVideoWidth() / (float) mp.getVideoHeight();
+                float screenRatio = videoView.getWidth() / (float) videoView.getHeight();
+                float scaleX = videoRatio / screenRatio;
+                if (scaleX >= 1f) {
+                    videoView.setScaleX(scaleX);
+                } else {
+                    videoView.setScaleY(1f / scaleX);
+                }
+            }
+        });
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        videoView.stopPlayback();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        if (requestCode == VideoPicker.VIDEO_PICKER_REQUEST_CODE && resultCode == RESULT_OK) {
+            List<String> mPaths =  data.getStringArrayListExtra(VideoPicker.EXTRA_VIDEO_PATH);
+            //Your Code
+
+
+            editor.putString(TEXT,mPaths.get(0));
+            editor.apply();
+            String pathV = sharedPreferences.getString(TEXT,"");
+            Log.d("Hello", "onActivityResult: " + pathV);
+
+            if (pathV != null){
+                Uri u = Uri.parse(pathV);
+                videoView.setVideoURI(u);
+            }else {
+                pathV = "android.resource://" + getPackageName() + "/" + R.raw.gg;
+                Uri u = Uri.parse(pathV);
+                videoView.setVideoURI(u);
+            }
+            videoView.start();
+            editor.apply();
+        }
+    }
+
 
     @Override
     protected void onResume() {
         bindService(intent, this, Context.BIND_AUTO_CREATE);
+        videoView.resume();
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -201,6 +274,8 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
     }
 
     private void initViews() {
+        menuBtn = findViewById(R.id.menu_btn);
+        videoView = findViewById(R.id.video_view);
         song_name = findViewById(R.id.song_name);
         artist = findViewById(R.id.artist);
         next = findViewById(R.id.id_next);
@@ -316,6 +391,7 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
     protected void onPause() {
         super.onPause();
         unbindService(this);
+        videoView.suspend();
         bounded = false;
         Log.e("Paused", bounded + "");
         Log.e("Paused", "passed");
