@@ -24,6 +24,7 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -72,6 +73,17 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         initViews();
         getIntentMethod();
         back_button.setOnClickListener(v -> onBackPressed());
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+        String pathV = sharedPreferences.getString(TEXT,"");
+        if (pathV != null){
+            videoView.setVideoPath(pathV);
+        }else {
+            String pathG = "android.resource://" + getPackageName() + "/"
+                    + R.raw.gg;
+            Uri u = Uri.parse(pathG);
+            videoView.setVideoURI(u);
+        }
+        videoView.start();
 
         menuBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,21 +128,8 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
             List<String> mPaths =  data.getStringArrayListExtra(VideoPicker.EXTRA_VIDEO_PATH);
             //Your Code
 
-
-            editor.putString(TEXT,mPaths.get(0));
-            editor.apply();
-            String pathV = sharedPreferences.getString(TEXT,"");
-            Log.d("Hello", "onActivityResult: " + pathV);
-
-            if (pathV != null){
-                Uri u = Uri.parse(pathV);
-                videoView.setVideoURI(u);
-            }else {
-                pathV = "android.resource://" + getPackageName() + "/" + R.raw.gg;
-                Uri u = Uri.parse(pathV);
-                videoView.setVideoURI(u);
-            }
-            videoView.start();
+            String videoPatd = mPaths.get(0);
+            editor.putString(TEXT,videoPatd);
             editor.apply();
         }
     }
