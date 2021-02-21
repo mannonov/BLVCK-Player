@@ -228,11 +228,11 @@ public class MusicService extends Service implements MediaPlayer.OnCompletionLis
         Intent broadcastIntent = new Intent(this, NotificationReciever.class);
         PendingIntent actionIntent = PendingIntent.getBroadcast(this, 0,
                 broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        byte[] albumPhoto = getAlbumToAdapter(musicFiles.get(position).getPath());
+//        byte[] albumPhoto = getAlbumToAdapter(musicFiles.get(position).getPath());
         Bitmap picture;
-        if (albumPhoto != null)
-            picture = BitmapFactory.decodeByteArray(albumPhoto, 0, albumPhoto.length);
-        else
+//        if (albumPhoto != null)
+//            picture = BitmapFactory.decodeByteArray(albumPhoto, 0, albumPhoto.length);
+//        else
             picture = BitmapFactory.decodeResource(getResources(), R.drawable.programmity);
         PendingIntent pendingIntentPrevious;
         int drw_previous;
@@ -282,12 +282,20 @@ public class MusicService extends Service implements MediaPlayer.OnCompletionLis
         startForeground(2, notification);
     }
 
-    private byte[] getAlbumToAdapter(String uri) {
+//    public static byte[] getAlbumToAdapter(String uri) {
+//        MediaMetadataRetriever retriever = new MediaMetadataRetriever();
+//        retriever.setDataSource(uri);
+//        byte[] art = retriever.getEmbeddedPicture();
+//        retriever.release();
+//        return art;
+//    }
+
+    public static byte[]Photoss(String uri){
         MediaMetadataRetriever retriever = new MediaMetadataRetriever();
         retriever.setDataSource(uri);
-        byte[] art = retriever.getEmbeddedPicture();
+        byte[] img = retriever.getEmbeddedPicture();
         retriever.release();
-        return art;
+        return img;
     }
 
     private static File getContentFile(Context context, Uri uri) {
