@@ -310,13 +310,13 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
             metaDataMethod(musicService.getUriOfMusicFile());
             musicService.onCompleted();
             if (musicService.isPlaying())
-            {
-                pause_play.setImageResource(R.drawable.ic_pause);
-            }
-            else
-            {
+          {
+              pause_play.setImageResource(R.drawable.ic_pause);
+          }
+          else
+          {
                 pause_play.setImageResource(R.drawable.ic_play);
-            }
+          }
             position = musicService.getPositionOfMusicFile();
         }
         //Toast.makeText(PlayerActivity.this, "Connected", Toast.LENGTH_SHORT).show();
@@ -453,7 +453,7 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
                 metaDataMethod(uri1);
                 song_name.setText(listsong.get(position).getTitle());
                 artist.setText(listsong.get(position).getArtist());
-                pause_play.setBackgroundResource(R.drawable.ic_pause);
+                pause_play.setImageResource(R.drawable.ic_pause);
                 seekBar.setMax(musicService.getFileDuration() / 1000);
                 PlayerActivity.this.runOnUiThread(new Runnable() {
                     @Override
@@ -483,7 +483,7 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
             if (bounded) {
                 song_name.setText(listsong.get(position).getTitle());
                 artist.setText(listsong.get(position).getArtist());
-                pause_play.setBackgroundResource(R.drawable.ic_play);
+                pause_play.setImageResource(R.drawable.ic_play);
                 seekBar.setMax(musicService.getFileDuration() / 1000);
                 PlayerActivity.this.runOnUiThread(new Runnable() {
 
@@ -531,7 +531,7 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
                     }
                 });
                 metaDataMethod(uri1);
-                pause_play.setBackgroundResource(R.drawable.ic_pause);
+                pause_play.setImageResource(R.drawable.ic_pause);
             }
             musicService.sendChannel2(R.drawable.ic_baseline_pause_24);
             musicService.start();
@@ -562,7 +562,7 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
                     }
                 });
                 metaDataMethod(uri1);
-                pause_play.setBackgroundResource(R.drawable.ic_play);
+                pause_play.setImageResource(R.drawable.ic_play);
             }
             musicService.sendChannel2(R.drawable.ic_baseline_play_arrow_24);
         }
