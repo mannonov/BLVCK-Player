@@ -60,8 +60,9 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
     MusicService musicService;
     boolean bounded = false;
     Intent intent;
-    public static final String SHARED_PREFS = "sharedPrefs";
-    public static final String TEXT = null;
+    public static SharedPreferences sharedPreferences;
+    String pathG;
+    String pathV;
 
 
     @Override
@@ -73,12 +74,13 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         initViews();
         getIntentMethod();
         back_button.setOnClickListener(v -> onBackPressed());
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
-        String pathV = sharedPreferences.getString(TEXT,"");
+        
+        sharedPreferences = getSharedPreferences("myPref",MODE_PRIVATE);
+        pathV = sharedPreferences.getString("text",null);
         if (pathV != null){
             videoView.setVideoPath(pathV);
         }else {
-            String pathG = "android.resource://" + getPackageName() + "/"
+            pathG = "android.resource://" + getPackageName() + "/"
                     + R.raw.gg;
             Uri u = Uri.parse(pathG);
             videoView.setVideoURI(u);
@@ -122,21 +124,27 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
+
         if (requestCode == VideoPicker.VIDEO_PICKER_REQUEST_CODE && resultCode == RESULT_OK) {
             List<String> mPaths =  data.getStringArrayListExtra(VideoPicker.EXTRA_VIDEO_PATH);
             //Your Code
-
-            String videoPatd = mPaths.get(0);
-            editor.putString(TEXT,videoPatd);
+            sharedPreferences = getSharedPreferences("myPref",MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            pathV = mPaths.get(0);
+            videoView.setVideoPath(mPaths.get(0));
+            editor.putString("text",mPaths.get(0));
             editor.apply();
+            videoView.start();
         }
     }
 
 
     @Override
     protected void onResume() {
+
+        sharedPreferences = getSharedPreferences("myPref", MODE_PRIVATE);
+        pathV = sharedPreferences.getString("ImagePath", "");
+
         bindService(intent, this, Context.BIND_AUTO_CREATE);
         videoView.resume();
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -388,6 +396,10 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
 
     @Override
     protected void onPause() {
+        sharedPreferences = getSharedPreferences("myPref", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("text", pathG);
+        editor.commit();
         super.onPause();
         unbindService(this);
         videoView.suspend();
