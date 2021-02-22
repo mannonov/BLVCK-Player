@@ -4,6 +4,7 @@
     package="com.aman.playmusix">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
@@ -12,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:name="uz.jaxadev.blvckplayer.App"
         android:supportsRtl="true"
-        android:theme="@style/DarkTheme">
+        android:theme="@style/DarkTheme"
+        android:requestLegacyExternalStorage="true">
         <activity android:name="uz.jaxadev.blvckplayer.AlbumDetails" />
         <activity
             android:name="uz.jaxadev.blvckplayer.PlayerActivity"

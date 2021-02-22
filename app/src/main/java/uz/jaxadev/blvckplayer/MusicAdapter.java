@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aman.playmusix.R;
@@ -40,6 +41,7 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
         this.mFiles = mFiles;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -50,6 +52,7 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         holder.file_name.setText(mFiles.get(position).getTitle());
+        holder.artist_name.setText(mFiles.get(position).getArtist());
         //byte[] image = getAlbumToAdapter(Uri.parse(mFiles.get(position).getPath()));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             Size size = new Size(200, 200);
@@ -120,16 +123,18 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
     }
 
     static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView file_name;
+        TextView file_name,artist_name;
         ImageView img_icon, menuMore;
         RelativeLayout music_item;
 
+        @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
         MyViewHolder(@NonNull View itemView) {
             super(itemView);
             file_name = itemView.findViewById(R.id.music_file_name);
             img_icon = itemView.findViewById(R.id.img_music);
             music_item = itemView.findViewById(R.id.music_item);
             menuMore = itemView.findViewById(R.id.menuMore);
+            artist_name = itemView.findViewById(R.id.music_artist_name);
         }
     }
 

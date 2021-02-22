@@ -75,8 +75,8 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         getIntentMethod();
         back_button.setOnClickListener(v -> onBackPressed());
         
-        sharedPreferences = getSharedPreferences("myPref",MODE_PRIVATE);
-        pathV = sharedPreferences.getString("text",null);
+        sharedPreferences = getSharedPreferences(getString(R.string.pref_key),MODE_PRIVATE);
+        pathV = sharedPreferences.getString(getString(R.string.path),null);
         if (pathV != null){
             videoView.setVideoPath(pathV);
         }else {
@@ -128,12 +128,12 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         if (requestCode == VideoPicker.VIDEO_PICKER_REQUEST_CODE && resultCode == RESULT_OK) {
             List<String> mPaths =  data.getStringArrayListExtra(VideoPicker.EXTRA_VIDEO_PATH);
             //Your Code
-            sharedPreferences = getSharedPreferences("myPref",MODE_PRIVATE);
+            sharedPreferences = getSharedPreferences(getString(R.string.pref_key),MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            pathV = mPaths.get(0);
-            videoView.setVideoPath(mPaths.get(0));
-            editor.putString("text",mPaths.get(0));
+            editor.putString(getString(R.string.path),mPaths.get(0));
             editor.apply();
+            Log.d("Hello", "onActivityResult: " + mPaths.get(0));
+            videoView.setVideoPath(mPaths.get(0));
             videoView.start();
         }
     }
@@ -141,10 +141,7 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
 
     @Override
     protected void onResume() {
-
-        sharedPreferences = getSharedPreferences("myPref", MODE_PRIVATE);
-        pathV = sharedPreferences.getString("ImagePath", "");
-
+        super.onResume();
         bindService(intent, this, Context.BIND_AUTO_CREATE);
         videoView.resume();
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -190,7 +187,7 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         playPauseBtnThread();
         nextBtnThread();
         previousBtnThread();
-        super.onResume();
+
     }
 
     private String formattedTime(int mCurrentPosition) {
@@ -396,10 +393,6 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
 
     @Override
     protected void onPause() {
-        sharedPreferences = getSharedPreferences("myPref", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("text", pathG);
-        editor.commit();
         super.onPause();
         unbindService(this);
         videoView.suspend();
@@ -578,15 +571,6 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
             musicService.sendChannel2(R.drawable.ic_baseline_play_arrow_24);
         }
     }
-
-    private byte[] getAlbumToAdapter(String uri) {
-        MediaMetadataRetriever retriever = new MediaMetadataRetriever();
-        retriever.setDataSource(uri);
-        byte[] art = retriever.getEmbeddedPicture();
-        retriever.release();
-        return art;
-    }
-
     @Override
     protected void onStart() {
         super.onStart();

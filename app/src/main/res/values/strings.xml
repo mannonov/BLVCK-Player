@@ -21,4 +21,6 @@
     <string name="album">Album</string>
     <string name="file_name">File name</string>
     <string name="file_name_music_item">File name music item</string>
+    <string name="pref_key">myPref</string>
+    <string name="path">path</string>
 </resources>
