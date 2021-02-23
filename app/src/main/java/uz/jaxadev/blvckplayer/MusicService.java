@@ -1,6 +1,7 @@
 package uz.jaxadev.blvckplayer;
 
 import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.ContentUris;
@@ -8,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.AudioManager;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -53,7 +55,7 @@ public class MusicService extends Service implements MediaPlayer.OnCompletionLis
     @Override
     public void onCreate() {
         super.onCreate();
-        mediaSession = new MediaSessionCompat(getBaseContext(), "PlayMusix");
+        mediaSession = new MediaSessionCompat(getBaseContext(), "BlvckPlayer");
     }
 
     @Nullable
@@ -65,7 +67,6 @@ public class MusicService extends Service implements MediaPlayer.OnCompletionLis
     void playSong(int startPosition) {
         musicFiles = PlayerActivity.listsong;
         position = startPosition;
-        //uri = Uri.parse(Uri.encode(musicFiles.get(position).getPath()));
         if (mediaPlayer != null) {
             mediaPlayer.stop();
             mediaPlayer.release();
@@ -153,7 +154,7 @@ public class MusicService extends Service implements MediaPlayer.OnCompletionLis
     boolean isPlaying() {
         if (mediaPlayer != null)
             return mediaPlayer.isPlaying();
-        return false;
+        return true;
     }
 
     void pause() {
@@ -228,11 +229,7 @@ public class MusicService extends Service implements MediaPlayer.OnCompletionLis
         Intent broadcastIntent = new Intent(this, NotificationReciever.class);
         PendingIntent actionIntent = PendingIntent.getBroadcast(this, 0,
                 broadcastIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-//        byte[] albumPhoto = getAlbumToAdapter(musicFiles.get(position).getPath());
         Bitmap picture;
-//        if (albumPhoto != null)
-//            picture = BitmapFactory.decodeByteArray(albumPhoto, 0, albumPhoto.length);
-//        else
             picture = BitmapFactory.decodeResource(getResources(), R.drawable.programmity);
         PendingIntent pendingIntentPrevious;
         int drw_previous;
@@ -277,27 +274,13 @@ public class MusicService extends Service implements MediaPlayer.OnCompletionLis
                 .setContentIntent(contentIntent)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setOnlyAlertOnce(true)
-                .setPriority(NotificationCompat.PRIORITY_LOW)
+                .setSound(null, AudioManager.STREAM_SYSTEM)
                 .build();
         startForeground(2, notification);
+        NotificationManager mNotificationManager = (NotificationManager)
+                getSystemService(NOTIFICATION_SERVICE);
+        mNotificationManager.cancelAll();
     }
-
-//    public static byte[] getAlbumToAdapter(String uri) {
-//        MediaMetadataRetriever retriever = new MediaMetadataRetriever();
-//        retriever.setDataSource(uri);
-//        byte[] art = retriever.getEmbeddedPicture();
-//        retriever.release();
-//        return art;
-//    }
-
-    public static byte[]Photoss(String uri){
-        MediaMetadataRetriever retriever = new MediaMetadataRetriever();
-        retriever.setDataSource(uri);
-        byte[] img = retriever.getEmbeddedPicture();
-        retriever.release();
-        return img;
-    }
-
     private static File getContentFile(Context context, Uri uri) {
         if (uri == null) return null;
         FileInputStream input = null;
