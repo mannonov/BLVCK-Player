@@ -1,4 +1,4 @@
-package uz.jaxadev.blvckplayer;
+package uz.jaxadevgroup.blvckplayer;
 
 import android.content.ComponentName;
 import android.content.ContentUris;
@@ -24,7 +24,6 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.MediaController;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -32,7 +31,7 @@ import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.palette.graphics.Palette;
 
-import com.aman.playmusix.R;
+
 
 import net.alhazmy13.mediapicker.Video.VideoPicker;
 
@@ -40,8 +39,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import static uz.jaxadev.blvckplayer.AlbumDetailsAdapter.musicFilesAlbums;
-import static uz.jaxadev.blvckplayer.MusicAdapter.mFiles;
+import static uz.jaxadevgroup.blvckplayer.AlbumDetailsAdapter.musicFilesAlbums;
+import static uz.jaxadevgroup.blvckplayer.MusicAdapter.mFiles;
 
 public class PlayerActivity extends AppCompatActivity implements ServiceConnection, MyServiceCallback, Playable {
     TextView song_name, artist;

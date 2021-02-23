@@ -1,4 +1,4 @@
-package uz.jaxadev.blvckplayer;
+package uz.jaxadevgroup.blvckplayer;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

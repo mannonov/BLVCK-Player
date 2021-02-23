@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.2"
 
     defaultConfig {
-        applicationId "uz.jaxadev.blvckplayer"
+        applicationId "uz.jaxadevgroup.blvckplayer"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1

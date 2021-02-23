@@ -1,4 +1,4 @@
-package uz.jaxadev.blvckplayer;
+package uz.jaxadevgroup.blvckplayer;
 
 import org.junit.Test;
 

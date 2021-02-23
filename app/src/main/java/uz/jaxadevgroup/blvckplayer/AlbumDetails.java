@@ -1,4 +1,4 @@
-package uz.jaxadev.blvckplayer;
+package uz.jaxadevgroup.blvckplayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,8 +14,6 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Size;
 import android.widget.ImageView;
-
-import com.aman.playmusix.R;
 import com.bumptech.glide.Glide;
 
 import java.io.IOException;

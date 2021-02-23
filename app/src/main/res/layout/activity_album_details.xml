@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?colorPrimaryDark"
-    tools:context="uz.jaxadev.blvckplayer.AlbumDetails">
+    tools:context="uz.jaxadevgroup.blvckplayer.AlbumDetails">
     <ImageView
         android:id="@+id/albumPhoto"
         android:scaleType="centerCrop"

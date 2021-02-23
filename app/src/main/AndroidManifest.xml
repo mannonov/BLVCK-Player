@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.aman.playmusix">
+    package="uz.jaxadevgroup.blvckplayer">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -9,33 +9,33 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="uz.jaxadev.blvckplayer.App"
+        android:name="uz.jaxadevgroup.blvckplayer.App"
         android:icon="@drawable/programmity"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@drawable/programmity"
         android:supportsRtl="true"
         android:theme="@style/DarkTheme">
-        <activity android:name="uz.jaxadev.blvckplayer.Splash">
+        <activity android:name="uz.jaxadevgroup.blvckplayer.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="uz.jaxadev.blvckplayer.AlbumDetails" />
+        <activity android:name="uz.jaxadevgroup.blvckplayer.AlbumDetails" />
         <activity
-            android:name="uz.jaxadev.blvckplayer.PlayerActivity"
+            android:name="uz.jaxadevgroup.blvckplayer.PlayerActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name="uz.jaxadev.blvckplayer.MainActivity">
+        <activity android:name="uz.jaxadevgroup.blvckplayer.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
 
         <receiver
-            android:name="uz.jaxadev.blvckplayer.NotificationReciever"
+            android:name="uz.jaxadevgroup.blvckplayer.NotificationReciever"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
@@ -48,7 +48,7 @@
         </receiver>
 
         <service
-            android:name="uz.jaxadev.blvckplayer.MusicService"
+            android:name="uz.jaxadevgroup.blvckplayer.MusicService"
             android:enabled="true"></service>
     </application>
 

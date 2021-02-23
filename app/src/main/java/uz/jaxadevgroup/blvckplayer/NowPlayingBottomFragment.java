@@ -1,4 +1,4 @@
-package uz.jaxadev.blvckplayer;
+package uz.jaxadevgroup.blvckplayer;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.aman.playmusix.R;
+
 
 
 /**

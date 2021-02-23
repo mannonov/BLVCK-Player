@@ -1,4 +1,4 @@
-package uz.jaxadev.blvckplayer;
+package uz.jaxadevgroup.blvckplayer;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -10,7 +10,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.AudioManager;
-import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Binder;
@@ -23,7 +22,7 @@ import android.support.v4.media.session.MediaSessionCompat;
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
-import com.aman.playmusix.R;
+
 
 import java.io.File;
 import java.io.FileDescriptor;
@@ -33,10 +32,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
-import static uz.jaxadev.blvckplayer.App.ACTION_NEXT;
-import static uz.jaxadev.blvckplayer.App.ACTION_PLAY;
-import static uz.jaxadev.blvckplayer.App.ACTION_PREVIOUS;
-import static uz.jaxadev.blvckplayer.App.CHANNEL_ID_2;
+import static uz.jaxadevgroup.blvckplayer.App.ACTION_NEXT;
+import static uz.jaxadevgroup.blvckplayer.App.ACTION_PLAY;
+import static uz.jaxadevgroup.blvckplayer.App.ACTION_PREVIOUS;
+import static uz.jaxadevgroup.blvckplayer.App.CHANNEL_ID_2;
 
 public class MusicService extends Service implements MediaPlayer.OnCompletionListener {
     public static final String CLICK_PLAY = "actionplay";

@@ -1,4 +1,4 @@
-package uz.jaxadev.blvckplayer;
+package uz.jaxadevgroup.blvckplayer;
 
 import android.Manifest;
 import android.content.ContentUris;
@@ -24,7 +24,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.aman.playmusix.R;
+
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;

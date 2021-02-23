@@ -1,4 +1,4 @@
-package uz.jaxadev.blvckplayer;
+package uz.jaxadevgroup.blvckplayer;
 
 import android.content.ContentUris;
 import android.content.Context;
@@ -23,7 +23,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.aman.playmusix.R;
+
 import com.bumptech.glide.Glide;
 import com.google.android.material.snackbar.Snackbar;
 

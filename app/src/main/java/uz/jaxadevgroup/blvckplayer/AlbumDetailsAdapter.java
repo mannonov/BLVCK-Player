@@ -1,4 +1,4 @@
-package uz.jaxadev.blvckplayer;
+package uz.jaxadevgroup.blvckplayer;
 
 import android.content.ContentUris;
 import android.content.Context;
@@ -14,29 +14,30 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.aman.playmusix.R;
+
 import com.bumptech.glide.Glide;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder> {
+public class AlbumDetailsAdapter extends RecyclerView.Adapter<AlbumDetailsAdapter.MyViewHolder> {
     private Context mContext;
-    private ArrayList<MusicFiles> musicFiles;
+    static ArrayList<MusicFiles> musicFilesAlbums;
     View view;
 
-    AlbumAdapter(Context mContext, ArrayList<MusicFiles> musicFiles) {
+    AlbumDetailsAdapter(Context mContext, ArrayList<MusicFiles> musicFilesAlbums) {
         this.mContext = mContext;
-        this.musicFiles = musicFiles;
+        this.musicFilesAlbums = musicFilesAlbums;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        view = LayoutInflater.from(mContext).inflate(R.layout.album_item, parent, false);
+        view = LayoutInflater.from(mContext).inflate(R.layout.album_songs_item, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -46,7 +47,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
             Size size = new Size(200, 200);
             try {
                 Uri contentUri = ContentUris.withAppendedId(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI,
-                        Long.parseLong(musicFiles.get(position).getId()));
+                        Long.parseLong(musicFilesAlbums.get(position).getId()));
                 Bitmap albumArt = mContext.getContentResolver().loadThumbnail(contentUri, size, null);
                 if (albumArt != null) {
                     Glide.with(mContext).asBitmap()
@@ -60,7 +61,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
                 e.printStackTrace();
             }
         } else {
-            byte[] image = getAlbumToAdapter(musicFiles.get(position).getPath());
+            byte[] image = getAlbumToAdapter(musicFilesAlbums.get(position).getPath());
             if (image != null) {
                 Glide.with(mContext).asBitmap()
                         .load(image)
@@ -70,12 +71,13 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
                         .load(R.drawable.programmity).into(holder.album_image);
             }
         }
-        holder.album_name.setText(musicFiles.get(position).getAlbum());
+        holder.album_name.setText(musicFilesAlbums.get(position).getTitle());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, AlbumDetails.class);
-                intent.putExtra("albumId", musicFiles.get(position).getAlbumid());
+                Intent intent = new Intent(mContext, PlayerActivity.class);
+                intent.putExtra("sender", "albumDetails");
+                intent.putExtra("position", position);
                 mContext.startActivity(intent);
             }
         });
@@ -83,17 +85,17 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
 
     @Override
     public int getItemCount() {
-        return musicFiles.size();
+        return musicFilesAlbums.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView album_image;
         TextView album_name;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            album_image = itemView.findViewById(R.id.album_image);
-            album_name = itemView.findViewById(R.id.album_name);
+            album_image = itemView.findViewById(R.id.img_music);
+            album_name = itemView.findViewById(R.id.music_file_name);
         }
     }
 
@@ -105,3 +107,4 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         return art;
     }
 }
+
