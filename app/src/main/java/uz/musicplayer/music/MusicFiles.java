@@ -1,4 +1,4 @@
-package uz.jaxadevgroup.blvckplayer;
+package uz.musicplayer.music;
 
 public class MusicFiles {
     private String id;

@@ -1,4 +1,4 @@
-package uz.jaxadevgroup.blvckplayer;
+package uz.musicplayer.music;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -32,10 +32,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
-import static uz.jaxadevgroup.blvckplayer.App.ACTION_NEXT;
-import static uz.jaxadevgroup.blvckplayer.App.ACTION_PLAY;
-import static uz.jaxadevgroup.blvckplayer.App.ACTION_PREVIOUS;
-import static uz.jaxadevgroup.blvckplayer.App.CHANNEL_ID_2;
+import static uz.musicplayer.music.App.ACTION_NEXT;
+import static uz.musicplayer.music.App.ACTION_PLAY;
+import static uz.musicplayer.music.App.ACTION_PREVIOUS;
+import static uz.musicplayer.music.App.CHANNEL_ID_2;
 
 public class MusicService extends Service implements MediaPlayer.OnCompletionListener {
     public static final String CLICK_PLAY = "actionplay";

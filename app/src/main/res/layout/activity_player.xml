@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#676363"
     android:orientation="vertical"
-    tools:context="uz.jaxadevgroup.blvckplayer.PlayerActivity">
+    tools:context="uz.musicplayer.music.PlayerActivity">
 
     <VideoView
         android:id="@+id/video_view"

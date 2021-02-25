@@ -1,4 +1,4 @@
-package uz.jaxadevgroup.blvckplayer;
+package uz.musicplayer.music;
 
 import android.content.ComponentName;
 import android.content.ContentUris;
@@ -39,8 +39,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import static uz.jaxadevgroup.blvckplayer.AlbumDetailsAdapter.musicFilesAlbums;
-import static uz.jaxadevgroup.blvckplayer.MusicAdapter.mFiles;
+import static uz.musicplayer.music.AlbumDetailsAdapter.musicFilesAlbums;
+import static uz.musicplayer.music.MusicAdapter.mFiles;
 
 public class PlayerActivity extends AppCompatActivity implements ServiceConnection, MyServiceCallback, Playable {
     TextView song_name, artist;

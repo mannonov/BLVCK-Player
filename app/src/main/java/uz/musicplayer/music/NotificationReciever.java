@@ -1,4 +1,4 @@
-package uz.jaxadevgroup.blvckplayer;
+package uz.musicplayer.music;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
