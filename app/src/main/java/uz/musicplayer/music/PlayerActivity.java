@@ -32,6 +32,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.palette.graphics.Palette;
 
 
+import com.bumptech.glide.Glide;
 
 import net.alhazmy13.mediapicker.Video.VideoPicker;
 
@@ -46,7 +47,7 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
     TextView song_name, artist;
     TextView duration_played;
     TextView duration_total;
-    ImageView next, previous, back_button,menuBtn;
+    ImageView next, previous, back_button,menuBtn,coverMusic;
     ImageView pause_play;
     VideoView videoView;
     SeekBar seekBar;
@@ -288,6 +289,7 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         back_button = findViewById(R.id.back_Btn);
         duration_played = findViewById(R.id.duration_played);
         duration_total = findViewById(R.id.total_duration);
+        coverMusic = findViewById(R.id.image_cover);
 
     }
 
@@ -373,8 +375,8 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
 
 
         if (art != null) {
-//            Glide.with(PlayerActivity.this).asBitmap()
-//                    .load(art).into(cover_art);
+            Glide.with(PlayerActivity.this).asBitmap()
+                    .load(art).into(coverMusic);
             //image = BitmapFactory.decodeByteArray(art, 0, art.length);
             //setting image with animation.
             image = BitmapFactory.decodeResource(getResources(), R.drawable.programmity);
@@ -576,4 +578,5 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         Intent intent = new Intent(this, MusicService.class);
         bindService(intent, this, Context.BIND_AUTO_CREATE);
     }
+
 }

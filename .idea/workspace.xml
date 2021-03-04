@@ -30,6 +30,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d576a4df-f470-48d5-a2c1-dc2ba0932c88" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/backgruond.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -41,46 +54,17 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/release/playMusixVer1.0.0.aab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/uz/jaxadevgroup/blvckplayer/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/uz/musicplayer/music/ExampleInstrumentedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/AlbumAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/AlbumAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/AlbumDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/AlbumDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/AlbumDetailsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/AlbumDetailsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/AlbumFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/AlbumFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/MusicAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/MusicAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/MusicFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/MusicFiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/MusicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/MusicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/MyServiceCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/MyServiceCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/NotificationReciever.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/NotificationReciever.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/NowPlayingBottomFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/NowPlayingBottomFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/Playable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/Playable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/PlayerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/PlayerActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/SongsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/SongsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/jaxadevgroup/blvckplayer/Splash.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/Splash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_album_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_album_details.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/PlayerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/PlayerActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_player.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_player.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_album.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_album.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_now_playing_bottom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_now_playing_bottom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_songs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_songs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/uz/jaxadevgroup/blvckplayer/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/uz/musicplayer/music/ExampleUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[5210607bfca63413]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -116,20 +100,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/apk.jks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../play_musix" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\JAXA\AndroidStudioProjects\BLVCK_Player\app\src\main\res\raw" />
-      <recent name="C:\Users\JAXA\AndroidStudioProjects\play_musix2\app\src\main\res\drawable-v24" />
-    </key>
-    <key name="android.template.-1483985244">
-      <recent name="uz.jaxadev.blvckplayer" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\JAXA\AndroidStudioProjects\BLVCK_Player\app\src\main\res\raw" />
       <recent name="C:\Users\JAXA\AndroidStudioProjects\play_musix2\app\src\main\res\drawable-v24" />
       <recent name="C:\Users\JAXA\AndroidStudioProjects\play_musix2\app\src\main\res\font" />
+    </key>
+    <key name="android.template.-1483985244">
+      <recent name="uz.jaxadev.blvckplayer" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JAXA\AndroidStudioProjects\BLVCK_Player\app\src\main\res\drawable-v24" />
+      <recent name="C:\Users\JAXA\AndroidStudioProjects\BLVCK_Player\app\src\main\res\raw" />
+      <recent name="C:\Users\JAXA\AndroidStudioProjects\play_musix2\app\src\main\res\drawable-v24" />
     </key>
   </component>
   <component name="RunManager">
@@ -240,26 +225,26 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="263" y="138" key="AndroidCreateResourceFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1613999592397" />
-    <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1614106361160">
+    <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1614837578967">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1614106361160" />
-    <state width="638" height="403" key="GridCell.Tab.0.bottom" timestamp="1614055557297">
+    <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1614837578967" />
+    <state width="1322" height="397" key="GridCell.Tab.0.bottom" timestamp="1614841269811">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="638" height="403" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1614055557297" />
-    <state width="638" height="403" key="GridCell.Tab.0.center" timestamp="1614055557297">
+    <state width="1322" height="397" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1614841269811" />
+    <state width="1322" height="397" key="GridCell.Tab.0.center" timestamp="1614841269811">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="638" height="403" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1614055557297" />
-    <state width="638" height="403" key="GridCell.Tab.0.left" timestamp="1614055557296">
+    <state width="1322" height="397" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1614841269811" />
+    <state width="1322" height="397" key="GridCell.Tab.0.left" timestamp="1614841269811">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="638" height="403" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1614055557296" />
-    <state width="638" height="403" key="GridCell.Tab.0.right" timestamp="1614055557297">
+    <state width="1322" height="397" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1614841269811" />
+    <state width="1322" height="397" key="GridCell.Tab.0.right" timestamp="1614841269811">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="638" height="403" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1614055557297" />
+    <state width="1322" height="397" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1614841269811" />
     <state x="404" y="124" width="570" height="524" key="StructurePopup" timestamp="1614003084247">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -272,9 +257,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="379" y="188" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1613883542410" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1614053681790">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1614842291333">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1614053681790" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1614842291333" />
   </component>
 </project>
