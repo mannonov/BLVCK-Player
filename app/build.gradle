@@ -42,4 +42,6 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'androidx.palette:palette:1.0.0'
     implementation 'net.alhazmy13.MediaPicker:libary:2.4.4'
+
+    implementation 'com.github.jgabrielfreitas:BlurImageView:1.0.1'
 }

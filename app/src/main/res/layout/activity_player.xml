@@ -13,16 +13,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <LinearLayout
-        android:layout_width="1000px"
-        android:layout_height="600px"
-        android:layout_marginHorizontal="25dp"
-        android:background="@drawable/backgruond"
+
+
+    <ImageView
+        android:id="@+id/img_blur_backround"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="180dp"
+        android:src="@drawable/johalin"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="@+id/video_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.57" />
+        app:layout_constraintVertical_bias="0.52" />
 
 
     <LinearLayout
@@ -32,7 +36,7 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="@+id/video_view"
         app:layout_constraintTop_toBottomOf="@+id/layout_top_btn"
-        app:layout_constraintVertical_bias="0.57">
+        app:layout_constraintVertical_bias="0.52">
 
         <TextView
             android:id="@+id/duration_played"
@@ -57,6 +61,7 @@
 
             />
     </LinearLayout>
+
 
     <RelativeLayout
         android:id="@+id/layout_top_btn"
@@ -99,6 +104,31 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/video_view"
+        app:layout_constraintVertical_bias="0.6">
+
+        <ImageView
+            android:id="@+id/img_shuffle"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_shuffle_on"
+            android:layout_marginRight="25dp"/>
+
+        <ImageView
+            android:id="@+id/img_repeate"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_repeate_on"
+            android:layout_marginLeft="25dp"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -106,6 +136,7 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="@+id/video_view"
         app:layout_constraintTop_toTopOf="@+id/video_view"
+        app:layout_constraintVertical_bias="0.45999998"
         tools:layout_editor_absoluteX="35dp">
 
         <LinearLayout
@@ -170,6 +201,7 @@
                 android:textSize="16dp" />
         </LinearLayout>
     </LinearLayout>
+
     <RelativeLayout
         android:id="@+id/layout_seekBar"
         android:layout_width="match_parent"
@@ -178,7 +210,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/card"
         app:layout_constraintTop_toTopOf="@+id/card"
-        app:layout_constraintVertical_bias="0.6">
+        app:layout_constraintVertical_bias="0.55">
 
 
         <SeekBar
@@ -200,13 +232,17 @@
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="@+id/card"
         app:layout_constraintTop_toTopOf="@+id/card"
-        app:layout_constraintVertical_bias="0.65999997">
+        app:layout_constraintVertical_bias="0.6">
+
+
+
+
 
 
         <ImageView
             android:id="@+id/id_prev"
             android:layout_width="25dp"
-            android:layout_height="35dp"
+            android:layout_height="25dp"
             android:layout_centerVertical="true"
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
@@ -223,7 +259,8 @@
             android:layout_centerVertical="true"
             android:clickable="true"
             android:focusable="true"
-            android:src="@drawable/ic_play" />
+            android:src="@drawable/ic_play"
+            />
 
         <ImageView
             android:id="@+id/id_next"
@@ -235,5 +272,8 @@
             android:layout_toEndOf="@+id/play_pause"
             android:layout_toRightOf="@+id/play_pause"
             android:src="@drawable/ic_free_icon_fast_forward_151854" />
+
+
+
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

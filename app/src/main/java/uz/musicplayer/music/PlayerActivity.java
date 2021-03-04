@@ -33,6 +33,7 @@ import androidx.palette.graphics.Palette;
 
 
 import com.bumptech.glide.Glide;
+import com.jgabrielfreitas.core.BlurImageView;
 
 import net.alhazmy13.mediapicker.Video.VideoPicker;
 
@@ -41,15 +42,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import static uz.musicplayer.music.AlbumDetailsAdapter.musicFilesAlbums;
+import static uz.musicplayer.music.MainActivity.repeatBoolean;
+import static uz.musicplayer.music.MainActivity.shuffleBoolean;
 import static uz.musicplayer.music.MusicAdapter.mFiles;
 
 public class PlayerActivity extends AppCompatActivity implements ServiceConnection, MyServiceCallback, Playable {
     TextView song_name, artist;
     TextView duration_played;
     TextView duration_total;
-    ImageView next, previous, back_button,menuBtn,coverMusic;
+    ImageView next, previous, back_button,menuBtn,coverMusic,shuffleBtn,repeateBtn;
     ImageView pause_play;
     VideoView videoView;
+    ImageView blurImageView;
     SeekBar seekBar;
     int position = -1;
     Thread pausePlay, nextBtn, previousBtn;
@@ -113,6 +117,26 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
                 }
             }
         });
+        shuffleBtn.setOnClickListener(v -> {
+            if (shuffleBoolean) {
+                shuffleBoolean = false;
+                shuffleBtn.setImageResource(R.drawable.ic_shuffle_on);
+            } else {
+                shuffleBtn.setImageResource(R.drawable.ic_shuffle_of);
+                shuffleBoolean = true;
+            }
+        });
+        repeateBtn.setOnClickListener(v -> {
+            if (repeatBoolean) {
+                repeatBoolean = false;
+                repeateBtn.setImageResource(R.drawable.ic_repeate_on);
+            } else {
+                repeatBoolean = true;
+                repeateBtn.setImageResource(R.drawable.ic_repeate_of);
+            }
+        });
+
+
     }
 
     @Override
@@ -269,7 +293,13 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
             }
             if (listsong != null) {
                 pause_play.setImageResource(R.drawable.ic_pause);
-
+                if (shuffleBoolean) {
+                    shuffleBtn.setImageResource(R.drawable.ic_shuffle_of);
+                }
+                if (repeatBoolean) {
+                    repeateBtn.setImageResource(R.drawable.ic_repeate_of);
+                    uri1 = Uri.parse(listsong.get(position).getPath());
+                }
             }
         }
         intent = new Intent(this, MusicService.class);
@@ -290,6 +320,10 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         duration_played = findViewById(R.id.duration_played);
         duration_total = findViewById(R.id.total_duration);
         coverMusic = findViewById(R.id.image_cover);
+        blurImageView =(ImageView) findViewById(R.id.img_blur_backround);
+        shuffleBtn = findViewById(R.id.img_shuffle);
+        repeateBtn = findViewById(R.id.img_repeate);
+
 
     }
 
@@ -445,9 +479,9 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         if (musicService.isPlaying()) {
             musicService.stop();
             musicService.release();
-            if (MainActivity.shuffleBoolean && !MainActivity.repeatBoolean) {
+            if (shuffleBoolean && !repeatBoolean) {
                 position = getRandom(listsong.size() - 1);
-            } else if (!MainActivity.shuffleBoolean && !MainActivity.repeatBoolean) {
+            } else if (!shuffleBoolean && !repeatBoolean) {
                 position = ((position + 1) % listsong.size());
             }
             uri1 = Uri.parse(listsong.get(position).getPath());
@@ -477,9 +511,9 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         } else {
             musicService.stop();
             musicService.release();
-            if (MainActivity.shuffleBoolean && !MainActivity.repeatBoolean) {
+            if (shuffleBoolean && !repeatBoolean) {
                 position = getRandom(listsong.size() - 1);
-            } else if (!MainActivity.shuffleBoolean && !MainActivity.repeatBoolean) {
+            } else if (!shuffleBoolean && !repeatBoolean) {
                 position = ((position + 1) % listsong.size());
             }
             uri1 = Uri.parse(listsong.get(position).getPath());
@@ -512,9 +546,9 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         if (musicService.isPlaying()) {
             musicService.stop();
             musicService.release();
-            if (MainActivity.shuffleBoolean && !MainActivity.repeatBoolean) {
+            if (shuffleBoolean && !repeatBoolean) {
                 position = getRandom(listsong.size());
-            } else if (!MainActivity.shuffleBoolean && !MainActivity.repeatBoolean) {
+            } else if (!shuffleBoolean && !repeatBoolean) {
                 position = ((position - 1) < 0 ? (listsong.size() - 1) : (position - 1));
             }
             uri1 = Uri.parse(listsong.get(position).getPath());
@@ -543,9 +577,9 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         } else {
             musicService.stop();
             musicService.release();
-            if (MainActivity.shuffleBoolean && !MainActivity.repeatBoolean) {
+            if (shuffleBoolean && !repeatBoolean) {
                 position = getRandom(listsong.size());
-            } else if (!MainActivity.shuffleBoolean && !MainActivity.repeatBoolean) {
+            } else if (!shuffleBoolean && !repeatBoolean) {
                 position = ((position - 1) < 0 ? (listsong.size() - 1) : (position - 1));
             }
             uri1 = Uri.parse(listsong.get(position).getPath());
