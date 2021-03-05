@@ -30,29 +30,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d576a4df-f470-48d5-a2c1-dc2ba0932c88" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/backgruound.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/joha.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/MusicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/MusicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/PlayerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/PlayerActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/backgruond.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/johalin.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_player.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_player.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/album_songs_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/album_songs_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/album_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/album_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[5210607bfca63413]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[437988d90806]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -88,22 +99,24 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../play_musix" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JAXA\AndroidStudioProjects\BLVCK_Player\app\src\main\res\drawable" />
+      <recent name="C:\Users\JAXA\AndroidStudioProjects\BLVCK_Player\app\src\main\res\raw" />
+      <recent name="C:\Users\JAXA\AndroidStudioProjects\play_musix2\app\src\main\res\drawable-v24" />
+      <recent name="C:\Users\JAXA\AndroidStudioProjects\play_musix2\app\src\main\res\font" />
+    </key>
+    <key name="android.template.-1483985244">
+      <recent name="uz.jaxadev.blvckplayer" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\JAXA\AndroidStudioProjects\BLVCK_Player\app\src\main\res\drawable" />
       <recent name="C:\Users\JAXA\AndroidStudioProjects\BLVCK_Player\app\src\main\res\drawable-v24" />
       <recent name="C:\Users\JAXA\AndroidStudioProjects\BLVCK_Player\app\src\main\res\raw" />
       <recent name="C:\Users\JAXA\AndroidStudioProjects\play_musix2\app\src\main\res\drawable-v24" />
-    </key>
-    <key name="android.template.-1483985244">
-      <recent name="uz.jaxadev.blvckplayer" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\JAXA\AndroidStudioProjects\BLVCK_Player\app\src\main\res\raw" />
-      <recent name="C:\Users\JAXA\AndroidStudioProjects\play_musix2\app\src\main\res\drawable-v24" />
-      <recent name="C:\Users\JAXA\AndroidStudioProjects\play_musix2\app\src\main\res\font" />
     </key>
   </component>
   <component name="RunManager">
@@ -206,10 +219,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="447" y="185" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1614055979879" />
-    <state x="413" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613914176605">
+    <state x="413" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614941058050">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="413" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1613914176605" />
+    <state x="413" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1614941058050" />
     <state x="263" y="138" key="AndroidCreateResourceDirectoryDialog" timestamp="1613831693666">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -218,10 +231,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="263" y="138" key="AndroidCreateResourceFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1613999592397" />
-    <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1614860009926">
+    <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1614940607708">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1614860009926" />
+    <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1614940607708" />
     <state width="1322" height="226" key="GridCell.Tab.0.bottom" timestamp="1614865205004">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -242,6 +255,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="404" y="124" width="570" height="524" key="StructurePopup/0.0.1366.768@0.0.1366.768" timestamp="1614003084247" />
+    <state x="499" y="161" key="chooseDestDirectoryDialog" timestamp="1614940656798">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="499" y="161" key="chooseDestDirectoryDialog/0.0.1366.768@0.0.1366.768" timestamp="1614940656798" />
     <state x="390" y="88" width="585" height="592" key="find.popup" timestamp="1614067059641">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

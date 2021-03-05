@@ -15,7 +15,7 @@
         android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:layout_height="170dp"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/programmity"
         android:id="@+id/album_image" />
 
         <TextView

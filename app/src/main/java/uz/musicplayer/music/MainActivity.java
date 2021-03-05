@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.MimeTypeMap;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -100,7 +101,14 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                 MediaStore.Audio.Media.DATE_MODIFIED,
                 MediaStore.Audio.Media.ALBUM_ID
         };
-        Cursor c = context.getContentResolver().query(uri, projection, null, null, sortOrder);
+
+        String selectionMimeType = MediaStore.Files.FileColumns.MIME_TYPE + "=?";
+
+        String mimeType = MimeTypeMap.getSingleton().getMimeTypeFromExtension("mp3");
+
+        String[] selectionArgsMp3 = new String[]{ mimeType };
+
+        Cursor c = context.getContentResolver().query(uri, projection, selectionMimeType, selectionArgsMp3, sortOrder);
         if (c != null) {
             int index = 0;
             while (c.moveToNext()) {
