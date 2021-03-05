@@ -7,7 +7,7 @@
         <item name="colorPrimary">@color/colorPrimaryDark</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkDark</item>
         <item name="colorAccent">@color/colorAccentDark</item>
-        <item name="colorSecondary">@color/colorTabDark</item>
+        <item name="colorSecondary">#000000</item>
     </style>
 
     <style name="LightTheme" parent="Base.AppTheme.Light" />

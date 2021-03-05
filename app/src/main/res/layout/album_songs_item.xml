@@ -1,32 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_height="wrap_content"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_height="wrap_content"
+android:layout_width="match_parent"
+android:layout_marginVertical="4dp"
+app:cardElevation="3dp"
+app:cardCornerRadius="15dp"
+android:layout_marginHorizontal="5dp">
+<RelativeLayout
     android:layout_width="match_parent"
-    android:layout_marginBottom="3dp"
-    app:cardElevation="3dp">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/white_gradient"
-        android:id="@+id/music_item">
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_gradient"
+    android:id="@+id/music_item">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/cropd"
+        app:cardCornerRadius="15dp"
+        android:layout_marginVertical="7dp"
+        android:layout_marginHorizontal="7dp">
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@mipmap/ic_launcher_round"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/programmity"
             android:id="@+id/img_music"
-            android:padding="5dp"/>
+            android:scaleType="centerCrop" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/file_name_music_item"
+        android:layout_toEndOf="@+id/cropd"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_toStartOf="@+id/menuMore"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/music_file_name"
-            android:text="@string/file_name"
-            android:layout_toEndOf="@+id/img_music"
-            android:layout_centerVertical="true"
+            android:text="@string/file_name_music_item"
             android:textColor="?colorAccent"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:layout_marginStart="10dp"/>
-    </RelativeLayout>
+            android:textSize="15dp"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/menuMore"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp"/>
+</RelativeLayout>
 </androidx.cardview.widget.CardView>

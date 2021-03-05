@@ -6,7 +6,7 @@
         android:title="@string/search"
         app:showAsAction="ifRoom"
         android:icon="@android:drawable/ic_menu_search"
-        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
     <item
         android:title="@string/sort_by"
         android:id="@+id/sortByOption"

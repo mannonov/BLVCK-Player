@@ -15,13 +15,16 @@
 
 
 
-    <ImageView
+    <com.jgabrielfreitas.core.BlurImageView
         android:id="@+id/img_blur_backround"
         android:layout_width="match_parent"
         android:layout_marginHorizontal="20dp"
         android:layout_height="180dp"
         android:src="@drawable/johalin"
         android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:radius="24"
         app:layout_constraintBottom_toBottomOf="@+id/video_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -259,7 +262,7 @@
             android:layout_centerVertical="true"
             android:clickable="true"
             android:focusable="true"
-            android:src="@drawable/ic_play"
+            android:src="@drawable/ic_pause"
             />
 
         <ImageView

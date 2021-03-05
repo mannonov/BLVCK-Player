@@ -84,7 +84,7 @@ public class MusicService extends Service implements MediaPlayer.OnCompletionLis
     public void onCompletion(MediaPlayer mp) {
         if (playable != null) {
             playable.nextBtnClicked();
-            sendChannel2(R.drawable.ic_pause);
+            sendChannel2(R.drawable.ic_baseline_pause_24);
             if (mediaPlayer != null) {
                 createMediaPlayer(position);
                 mediaPlayer.start();

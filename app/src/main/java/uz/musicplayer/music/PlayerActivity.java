@@ -53,7 +53,7 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
     ImageView next, previous, back_button,menuBtn,coverMusic,shuffleBtn,repeateBtn;
     ImageView pause_play;
     VideoView videoView;
-    ImageView blurImageView;
+    BlurImageView blurImageView;
     SeekBar seekBar;
     int position = -1;
     Thread pausePlay, nextBtn, previousBtn;
@@ -77,6 +77,9 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         getSupportActionBar().hide();
         initViews();
         getIntentMethod();
+
+        blurImageView.setBlur(20);
+
         back_button.setOnClickListener(v -> onBackPressed());
         
         sharedPreferences = getSharedPreferences(getString(R.string.pref_key),MODE_PRIVATE);
@@ -320,7 +323,7 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         duration_played = findViewById(R.id.duration_played);
         duration_total = findViewById(R.id.total_duration);
         coverMusic = findViewById(R.id.image_cover);
-        blurImageView =(ImageView) findViewById(R.id.img_blur_backround);
+        blurImageView =(BlurImageView) findViewById(R.id.img_blur_backround);
         shuffleBtn = findViewById(R.id.img_shuffle);
         repeateBtn = findViewById(R.id.img_repeate);
 

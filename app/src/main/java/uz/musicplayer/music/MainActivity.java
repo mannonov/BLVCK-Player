@@ -75,10 +75,10 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         String sortOrder = null;
         switch (order) {
             case "sortByName":
-                sortOrder = MediaStore.MediaColumns.DISPLAY_NAME + " ASC";
+                sortOrder = MediaStore.MediaColumns.DISPLAY_NAME + " DESC";
                 break;
             case "sortByDate":
-                sortOrder = MediaStore.MediaColumns.DATE_ADDED + " ASC";
+                sortOrder = MediaStore.MediaColumns.DATE_ADDED + " DESC";
                 break;
             case "sortBySize":
                 sortOrder = MediaStore.MediaColumns.SIZE + " DESC";
@@ -171,6 +171,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragments(new SongsFragment(), "Songs");
+        viewPagerAdapter.addFragments(new AlbumFragment(), "Albums");
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }
