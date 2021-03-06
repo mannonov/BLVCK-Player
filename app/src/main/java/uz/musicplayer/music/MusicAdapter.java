@@ -51,8 +51,10 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
-        holder.file_name.setText(mFiles.get(position).getTitle());
-        holder.artist_name.setText(mFiles.get(position).getArtist());
+        if (mFiles.get(position).getTitle() != null && mFiles.get(position).getArtist() != null ){
+            holder.file_name.setText(mFiles.get(position).getTitle());
+            holder.artist_name.setText(mFiles.get(position).getArtist());
+        }
         //byte[] image = getAlbumToAdapter(Uri.parse(mFiles.get(position).getPath()));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             Size size = new Size(200, 200);

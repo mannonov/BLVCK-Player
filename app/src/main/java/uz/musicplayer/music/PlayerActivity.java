@@ -1,5 +1,6 @@
 package uz.musicplayer.music;
 
+import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.ContentUris;
 import android.content.Context;
@@ -54,6 +55,7 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
     ImageView next, previous, back_button, menuBtn, coverMusic, shuffleBtn, repeateBtn;
     ImageView pause_play;
     VideoView videoView;
+    TextView phoneModel;
     SeekBar seekBar;
     BlurLayout blurLayout;
     int position = -1;
@@ -70,6 +72,7 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
     String pathV;
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,9 +81,17 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         getSupportActionBar().hide();
         initViews();
         getIntentMethod();
-        back_button.setOnClickListener(v -> onBackPressed());
-        blurLayout = findViewById(R.id.img_blur_backround);
 
+        back_button.setOnClickListener(v -> onBackPressed());
+
+
+        String manufacturer = Build.MANUFACTURER;
+        String model = Build.MODEL;
+        if (model.toLowerCase().startsWith(manufacturer.toLowerCase())) {
+            phoneModel.setText(manufacturer +  " " + model + " | BLVCK Player");
+        } else {
+            phoneModel.setText(manufacturer +  " " +model + " | BLVCK Player");
+        }
         sharedPreferences = getSharedPreferences(getString(R.string.pref_key), MODE_PRIVATE);
         pathV = sharedPreferences.getString(getString(R.string.path), null);
         if (pathV != null) {
@@ -138,7 +149,17 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
             }
         });
 
-
+    }
+    private static String capitalize(String s) {
+        if (s == null || s.length() == 0) {
+            return "";
+        }
+        char first = s.charAt(0);
+        if (Character.isUpperCase(first)) {
+            return s;
+        } else {
+            return Character.toUpperCase(first) + s.substring(1);
+        }
     }
 
     @Override
@@ -324,7 +345,14 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         coverMusic = findViewById(R.id.image_cover);
         shuffleBtn = findViewById(R.id.img_shuffle);
         repeateBtn = findViewById(R.id.img_repeate);
+        blurLayout = findViewById(R.id.img_blur_backround);
+        phoneModel = findViewById(R.id.phone_model);
 
+
+
+        phoneModel.setSelected(true);
+        artist.setSelected(false);
+        song_name.setSelected(false);
 
     }
 
