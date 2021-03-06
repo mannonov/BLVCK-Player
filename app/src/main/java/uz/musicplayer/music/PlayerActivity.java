@@ -31,9 +31,7 @@ import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.palette.graphics.Palette;
 
-
 import com.bumptech.glide.Glide;
-import com.jgabrielfreitas.core.BlurImageView;
 
 import net.alhazmy13.mediapicker.Video.VideoPicker;
 
@@ -41,6 +39,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import io.alterac.blurkit.BlurLayout;
+
 import static uz.musicplayer.music.AlbumDetailsAdapter.musicFilesAlbums;
 import static uz.musicplayer.music.MainActivity.repeatBoolean;
 import static uz.musicplayer.music.MainActivity.shuffleBoolean;
@@ -50,11 +51,11 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
     TextView song_name, artist;
     TextView duration_played;
     TextView duration_total;
-    ImageView next, previous, back_button,menuBtn,coverMusic,shuffleBtn,repeateBtn;
+    ImageView next, previous, back_button, menuBtn, coverMusic, shuffleBtn, repeateBtn;
     ImageView pause_play;
     VideoView videoView;
-    BlurImageView blurImageView;
     SeekBar seekBar;
+    BlurLayout blurLayout;
     int position = -1;
     Thread pausePlay, nextBtn, previousBtn;
     static ArrayList<MusicFiles> listsong = new ArrayList<>();
@@ -77,16 +78,14 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         getSupportActionBar().hide();
         initViews();
         getIntentMethod();
-
-        blurImageView.setBlur(20);
-
         back_button.setOnClickListener(v -> onBackPressed());
-        
-        sharedPreferences = getSharedPreferences(getString(R.string.pref_key),MODE_PRIVATE);
-        pathV = sharedPreferences.getString(getString(R.string.path),null);
-        if (pathV != null){
+        blurLayout = findViewById(R.id.img_blur_backround);
+
+        sharedPreferences = getSharedPreferences(getString(R.string.pref_key), MODE_PRIVATE);
+        pathV = sharedPreferences.getString(getString(R.string.path), null);
+        if (pathV != null) {
             videoView.setVideoPath(pathV);
-        }else {
+        } else {
             pathG = "android.resource://" + getPackageName() + "/"
                     + R.raw.gg;
             Uri u = Uri.parse(pathG);
@@ -153,11 +152,11 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == VideoPicker.VIDEO_PICKER_REQUEST_CODE && resultCode == RESULT_OK) {
-            List<String> mPaths =  data.getStringArrayListExtra(VideoPicker.EXTRA_VIDEO_PATH);
+            List<String> mPaths = data.getStringArrayListExtra(VideoPicker.EXTRA_VIDEO_PATH);
             //Your Code
-            sharedPreferences = getSharedPreferences(getString(R.string.pref_key),MODE_PRIVATE);
+            sharedPreferences = getSharedPreferences(getString(R.string.pref_key), MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString(getString(R.string.path),mPaths.get(0));
+            editor.putString(getString(R.string.path), mPaths.get(0));
             editor.apply();
             Log.d("Hello", "onActivityResult: " + mPaths.get(0));
             videoView.setVideoPath(mPaths.get(0));
@@ -323,7 +322,6 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
         duration_played = findViewById(R.id.duration_played);
         duration_total = findViewById(R.id.total_duration);
         coverMusic = findViewById(R.id.image_cover);
-        blurImageView =(BlurImageView) findViewById(R.id.img_blur_backround);
         shuffleBtn = findViewById(R.id.img_shuffle);
         repeateBtn = findViewById(R.id.img_repeate);
 
@@ -351,14 +349,11 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
             musicService.sendChannel2(R.drawable.ic_baseline_pause_24);
             metaDataMethod(musicService.getUriOfMusicFile());
             musicService.onCompleted();
-            if (musicService.isPlaying())
-          {
-              pause_play.setImageResource(R.drawable.ic_pause);
-          }
-          else
-          {
+            if (musicService.isPlaying()) {
+                pause_play.setImageResource(R.drawable.ic_pause);
+            } else {
                 pause_play.setImageResource(R.drawable.ic_play);
-          }
+            }
             position = musicService.getPositionOfMusicFile();
         }
         //Toast.makeText(PlayerActivity.this, "Connected", Toast.LENGTH_SHORT).show();
@@ -609,6 +604,7 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
             musicService.sendChannel2(R.drawable.ic_baseline_play_arrow_24);
         }
     }
+
     @Override
     protected void onStart() {
         super.onStart();
