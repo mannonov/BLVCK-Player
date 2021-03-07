@@ -10,8 +10,8 @@
         <item name="colorPrimary">@color/colorPrimaryDark</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkDark</item>
         <item name="colorAccent">@color/colorAccentDark</item>
-        <item name="colorSecondary">#000000</item>
-
+        <item name="colorSecondary">#212121</item>
+        <item name="yearTodayStyle">@color/colorMusicWidget</item>
     </style>
 
     <style name="LightTheme" parent="Base.AppTheme.Light" />
@@ -21,6 +21,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDarkLight</item>
         <item name="colorAccent">@color/colorAccentLight</item>
         <item name="colorSecondary">@color/colorTabLight</item>
+        <item name="yearTodayStyle">@color/colorMusicWidget1</item>
     </style>
 
     <style name="CoolTheme" parent="Base.AppTheme.Cool" />
@@ -29,7 +30,8 @@
         <item name="colorPrimary">@color/colorPrimaryLight1</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkLight1</item>
         <item name="colorAccent">@color/colorAccentLight1</item>
-        <item name="colorSecondary">@color/colorTabLight1</item>
+        <item name="colorSecondary">#0B2A43</item>
+        <item name="yearTodayStyle">@color/colorMusicWidget2</item>
     </style>
 
 </resources>

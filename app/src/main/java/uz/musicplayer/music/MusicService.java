@@ -7,6 +7,7 @@ import android.app.Service;
 import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.AudioManager;
@@ -50,6 +51,10 @@ public class MusicService extends Service implements MediaPlayer.OnCompletionLis
     MyServiceCallback myServiceCallback;
     Playable playable;
     MediaSessionCompat mediaSession;
+    public static final String MUSIC_FILE_LAST_PLAYED = "LAST_PLAYED";
+    public static final String MUSIC_FILE = "STORED_MUSIC";
+    public static final String SONG_NAME = "SONG_NAME";
+    public static final String ARTIST_NAME = "ARTIST_NAME";
 
     @Override
     public void onCreate() {
@@ -203,6 +208,14 @@ public class MusicService extends Service implements MediaPlayer.OnCompletionLis
         } else {
             uri = Uri.parse(musicFiles.get(position).getPath());
         }
+        SharedPreferences.Editor editor = getSharedPreferences(MUSIC_FILE_LAST_PLAYED,MODE_PRIVATE)
+                .edit();
+        editor.putString(MUSIC_FILE,uri.toString());
+        editor.apply();
+        editor.putString(ARTIST_NAME,musicFiles.get(position).getArtist());
+        editor.apply();
+        editor.putString(SONG_NAME,musicFiles.get(position).getTitle());
+        editor.apply();
         mediaPlayer = MediaPlayer.create(getBaseContext(), uri);
     }
 
@@ -279,6 +292,7 @@ public class MusicService extends Service implements MediaPlayer.OnCompletionLis
         NotificationManager mNotificationManager = (NotificationManager)
                 getSystemService(NOTIFICATION_SERVICE);
         mNotificationManager.cancelAll();
+
     }
     private static File getContentFile(Context context, Uri uri) {
         if (uri == null) return null;

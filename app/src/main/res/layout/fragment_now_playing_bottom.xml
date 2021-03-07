@@ -2,66 +2,92 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="60dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="uz.musicplayer.music.NowPlayingBottomFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:id="@+id/card_fragment_bottom"
-        android:background="?colorPrimary"
-        >
+        ><io.alterac.blurkit.BlurLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:blk_blurRadius="25"
+        app:blk_downscaleFactor="0.1"
+        app:blk_fps="60"
+        app:blk_cornerRadius="15dp"
+        />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="5dp"
             android:layout_alignParentStart="true"
             android:id="@+id/linear_layout">
             <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardElevation="5dp"
-                android:id="@+id/card_image">
-
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/card_image"
+                app:cardCornerRadius="15dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="5dp">
                 <ImageView
-                    android:scaleType="centerCrop"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:src="@drawable/programmity"
-                    android:id="@+id/bottom_album_art"/>
+                    android:id="@+id/bottom_album_art"
+                    android:scaleType="centerCrop" />
             </androidx.cardview.widget.CardView>
         </LinearLayout>
+
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/ic_skip_next"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_free_icon_fast_forward_151854"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="20dp"
             android:layout_centerVertical="true"
             android:id="@+id/skip_forward"/>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fabSize="mini"
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:src="@drawable/ic_play"
             android:layout_toStartOf="@+id/skip_forward"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="20dp"
             android:layout_centerVertical="true"
             android:id="@+id/pause_fragment"/>
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Song Name"
             android:layout_centerVertical="true"
-            android:layout_marginStart="15dp"
             android:layout_toEndOf="@+id/linear_layout"
             android:layout_toStartOf="@+id/pause_fragment"
-            android:textSize="18sp"
-            android:textColor="?colorAccent"/>
+            android:textColor="?colorAccent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:id="@+id/song_name_mini_player"
+                android:text="Song Name"
+                android:layout_centerVertical="true"
+                android:textSize="18dp"
+                android:textColor="?colorAccent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Artist Name"
+                android:singleLine="true"
+                android:id="@+id/artis_name_mini_player"
+                android:layout_centerVertical="true"
+                android:textSize="18dp"
+                android:textColor="?colorAccent"/>
 
+        </LinearLayout>
 
     </RelativeLayout>
 

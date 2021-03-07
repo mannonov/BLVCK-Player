@@ -427,29 +427,18 @@ public class PlayerActivity extends AppCompatActivity implements ServiceConnecti
             retriever.setDataSource(uri.toString());
             art = retriever.getEmbeddedPicture();
             retriever.release();
-            if (art != null)
-                image = BitmapFactory.decodeByteArray(art, 0, art.length);
-            else
-                image = BitmapFactory.decodeResource(getResources(), R.drawable.programmity);
+            if (art != null) {
+                Glide.with(PlayerActivity.this).asBitmap()
+                        .load(art).into(coverMusic);
+            }else {
+                Glide.with(PlayerActivity.this).asBitmap()
+                        .load(R.drawable.programmity).into(coverMusic);
+            }
+
         }
 
 
-        if (art != null) {
-            Glide.with(PlayerActivity.this).asBitmap()
-                    .load(art).into(coverMusic);
-            //image = BitmapFactory.decodeByteArray(art, 0, art.length);
-            //setting image with animation.
-            image = BitmapFactory.decodeResource(getResources(), R.drawable.programmity);
-            Palette.from(image).generate(palette -> {
-                Palette.Swatch dominantSwach = null;
-                if (palette != null) {
-                    dominantSwach = palette.getDarkMutedSwatch();
-                }
-                if (dominantSwach != null) {
 
-                }
-            });
-        }
     }
 
     @Override

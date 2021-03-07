@@ -23,19 +23,13 @@
         android:layout_centerHorizontal="true"
         app:blk_blurRadius="25"
         app:blk_downscaleFactor="0.1"
-        app:blk_fps="60"
+        app:blk_fps="30"
+        app:blk_cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/video_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.52" >
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_joha"
-            android:scaleType="centerCrop"
-            />
     </io.alterac.blurkit.BlurLayout>
 
 

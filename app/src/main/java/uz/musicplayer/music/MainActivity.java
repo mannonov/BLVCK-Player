@@ -3,6 +3,7 @@ package uz.musicplayer.music;
 import android.Manifest;
 import android.content.ContentUris;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -11,7 +12,9 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.MimeTypeMap;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -39,6 +42,15 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     static SearchView searchView;
     String MY_PREFS_THEME = "THEME";
     String MY_PREFS_NAME = "SortOrder";
+    public static final String MUSIC_FILE_LAST_PLAYED = "LAST_PLAYED";
+    public static final String MUSIC_FILE = "STORED_MUSIC";
+    public static boolean SHOW_MUSIC_PLAYER = false;
+    public static String PATH_TO_FRAG = null;
+    public static String SONG_TO_FRAG = null;
+    public static String ARTIST_TO_FRAG = null;
+    public static final String SONG_NAME = "SONG_NAME";
+    public static final String ARTIST_NAME = "ARTIST_NAME";
+    FrameLayout nowPlayingMusic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +58,16 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         setTheme();
         setContentView(R.layout.activity_main);
         permission();
+
+        nowPlayingMusic = findViewById(R.id.frag_bottom_player);
+
+        nowPlayingMusic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,PlayerActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         //  retrieve();
@@ -302,4 +324,26 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         }
     }
 
+    @Override
+    protected void onResume() {
+
+        SharedPreferences preferences = getSharedPreferences(MUSIC_FILE_LAST_PLAYED,
+                MODE_PRIVATE);
+        String path = preferences.getString(MUSIC_FILE,null);
+        String artist = preferences.getString(ARTIST_NAME,null);
+        String song = preferences.getString(SONG_NAME,null);
+        if (path != null){
+            SHOW_MUSIC_PLAYER = true;
+            PATH_TO_FRAG = path;
+            ARTIST_TO_FRAG = artist;
+            SONG_TO_FRAG = song;
+        }else {
+            SHOW_MUSIC_PLAYER = false;
+            PATH_TO_FRAG = null;
+            ARTIST_TO_FRAG = null;
+            SONG_TO_FRAG = null;
+        }
+
+        super.onResume();
+    }
 }

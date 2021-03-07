@@ -51,7 +51,7 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
-        if (mFiles.get(position).getTitle() != null && mFiles.get(position).getArtist() != null ){
+        if (mFiles.get(position).getDuration() != null){
             holder.file_name.setText(mFiles.get(position).getTitle());
             holder.artist_name.setText(mFiles.get(position).getArtist());
         }
