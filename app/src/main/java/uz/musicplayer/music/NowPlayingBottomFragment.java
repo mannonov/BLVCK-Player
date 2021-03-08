@@ -27,6 +27,8 @@ public class NowPlayingBottomFragment extends Fragment {
     TextView artistName,musicName;
     View view;
 
+    PlayerActivity playerActivity;
+
     public NowPlayingBottomFragment() {
         // Required empty public constructor
     }
@@ -43,9 +45,12 @@ public class NowPlayingBottomFragment extends Fragment {
         artistName = view.findViewById(R.id.artis_name_mini_player);
         musicName = view.findViewById(R.id.song_name_mini_player);
 
+        playerActivity = new PlayerActivity();
+
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 
             }
         });

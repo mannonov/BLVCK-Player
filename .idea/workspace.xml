@@ -36,27 +36,17 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/MusicAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/MusicAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/MusicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/MusicService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/NowPlayingBottomFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/NowPlayingBottomFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/PlayerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/uz/musicplayer/music/PlayerActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/tab_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/tab_background.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_player.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_player.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_now_playing_bottom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_now_playing_bottom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[5210607bfca63413]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -238,22 +228,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1614955165777" />
-    <state width="1322" height="373" key="GridCell.Tab.0.bottom" timestamp="1615104791962">
+    <state width="1322" height="373" key="GridCell.Tab.0.bottom" timestamp="1615106215741">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="373" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1615104791962" />
-    <state width="1322" height="373" key="GridCell.Tab.0.center" timestamp="1615104791961">
+    <state width="1322" height="373" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1615106215741" />
+    <state width="1322" height="373" key="GridCell.Tab.0.center" timestamp="1615106215741">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="373" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1615104791961" />
-    <state width="1322" height="373" key="GridCell.Tab.0.left" timestamp="1615104791960">
+    <state width="1322" height="373" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1615106215741" />
+    <state width="1322" height="373" key="GridCell.Tab.0.left" timestamp="1615106215740">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="373" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1615104791960" />
-    <state width="1322" height="373" key="GridCell.Tab.0.right" timestamp="1615104791962">
+    <state width="1322" height="373" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1615106215740" />
+    <state width="1322" height="373" key="GridCell.Tab.0.right" timestamp="1615106215741">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="373" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1615104791962" />
+    <state width="1322" height="373" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1615106215741" />
     <state x="263" y="126" key="IDE.errors.dialog" timestamp="1615004144963">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
